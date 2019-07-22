@@ -19,4 +19,15 @@ public class DatabaseAdminTest {
     public void canHaveNINumber() {
         assertEquals("TT000000", databaseAdmin.getNINumber());
     }
+
+    @Test
+    public void canHaveNewSalary() {
+        databaseAdmin.increaseSalery(20000);
+        assertEquals(40000, databaseAdmin.getSalery(), 0.1);
+    }
+
+    @Test
+    public void canRetrieveBonus() {
+        assertEquals(200, databaseAdmin.bonus(), 0.1);
+    }
 }
