@@ -28,11 +28,19 @@ public class Employee {
     }
 
     public void increaseSalery(double increase){
-        this.salery += increase;
+        if (increase > 0){
+            this.salery += increase;
+        }
     }
 
     public double bonus(){
         double employeeBonus = this.salery / 100;
         return employeeBonus;
+    }
+
+    public void updateName(String newName){
+        if (newName != null){
+            this.name = newName;
+        }
     }
 }//
